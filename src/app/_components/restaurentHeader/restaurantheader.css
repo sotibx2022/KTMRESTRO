@@ -1,0 +1,15 @@
+.menu_wrapper{
+    background-color: var(--secondary);
+    padding:1rem 0;
+}
+.menuarea{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.menuarea ul li a{
+    color:var(--primary);
+}

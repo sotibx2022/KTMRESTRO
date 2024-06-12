@@ -1,0 +1,9 @@
+.common_footer{
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100vw;
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+}
