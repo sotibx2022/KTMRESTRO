@@ -22,11 +22,7 @@ export async function POST(request){
     })
     try{
         let savedRestaurant = await newItem.save();
-        return NextResponse.json({
-            message:"New Restaurant Created"
-        },{
-            status:200
-        })
+        return NextResponse.json({savedRestaurantData:newItem,message:"Data Stored Successfully",status:200,success:true})
     }
     catch(error){
         return NextResponse.json({

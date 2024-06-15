@@ -1,11 +1,20 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Login from '../_components/login/Login';
 import Register from '../_components/register/Register';
 import RestaurantHeader from '../_components/restaurentHeader/RestaurantHeader';
 import Footer from '../_components/footer/Footer';
+import { useRouter } from 'next/navigation';
  const page = () => {
+  const router = useRouter()
     const[login, setLogin] = useState(false);
+    useEffect(()=>{
+      const savedDetails = JSON.parse(localStorage.getItem("restaurantDetails"));
+      if(savedDetails){
+          router.push("/restaurant/dashboard");
+      }
+
+  },[])
   return (
     <>
     <RestaurantHeader/>
