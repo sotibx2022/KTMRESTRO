@@ -15,12 +15,10 @@ export async function GET(){
 } 
 
 export async function POST(request){
-    const{name, email, password} = await request.json();
+    const{email, password,restaurantName,city,fullAddress,contactNumber} = await request.json();
     await connectToDb();
     let newItem = new Restaurant({
-        name,
-        email,
-        password
+        email,password,restaurantName,city,fullAddress,contactNumber
     })
     try{
         let savedRestaurant = await newItem.save();
