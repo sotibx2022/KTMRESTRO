@@ -21,7 +21,7 @@ import { useRouter } from 'next/navigation';
     <div className='container'>
     <h1 className='heading'>Restaurant page</h1>
     {login?<Login/>:<Register/>}
-    <h3 className='link_text' onClick={()=>{setLogin(!login)}}>{login?"Please login":"Please Register"}</h3>
+    <h3 className='link_text' onClick={()=>{setLogin(!login)}}>{login?"Already Registered ? Please login":"Don't have an Account? Please Register"}</h3>
     
     </div>
     <Footer/>

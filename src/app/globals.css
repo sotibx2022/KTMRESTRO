@@ -16,7 +16,7 @@
     font-style: italic;
     margin: 1rem 0;
 }
-button {
+.link_text {
     background-color: white;
     color: black;
     border: none;
@@ -27,7 +27,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-button:hover {
+.link_text:hover {
     background-color: black;
     color: white;
 }
@@ -48,7 +48,7 @@ button:hover {
     height: 2rem;
     margin-bottom: 1rem;
 }
-.link_text{
+.button{
     border:1px solid var(--secondary);
     max-width: 20vw;
     padding: 0.5rem;
@@ -73,4 +73,7 @@ button:hover {
 }
 a{
     text-decoration: none;
+}
+.errorMessage{
+    color:Red;
 }
