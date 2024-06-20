@@ -4,6 +4,7 @@ import RestaurantHeader from '@/app/_components/restaurentHeader/RestaurantHeade
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import AddFoodItem from '@/app/_components/addFoodItem/AddFoodItem'
+import FoodItemsList from '@/app/_components/foodItemsList/FoodItemsList'
 const page = () => {
    const[showFoodItemForm, setShowFoodItemForm] = useState(false);
 const router= useRouter()
@@ -21,7 +22,7 @@ const router= useRouter()
       <button onClick={()=>setShowFoodItemForm(true)}>Add Food</button>
       <button onClick={()=>setShowFoodItemForm(false)}>Dashboard</button>
     </div>
-    {showFoodItemForm ? <AddFoodItem/>  : <h1 className='container heading'>Welcome to the Restaurant Dashboard Page</h1>}
+    {showFoodItemForm ? <AddFoodItem/>  : <FoodItemsList/>}
     
     
     <Footer/>
