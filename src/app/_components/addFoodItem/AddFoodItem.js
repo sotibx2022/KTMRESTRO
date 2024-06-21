@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddFoodItem = () => {
+const AddFoodItem = (props) => {
     const [foodDetails, setFoodDetails] = useState({
         foodName:"",
         foodImage:"",
@@ -9,6 +9,8 @@ const AddFoodItem = () => {
     })
     const{foodName, foodImage, foodPrice, foodDescription} = foodDetails;
     const[inputError, setInputError] = useState(false);
+   
+  
     
 
     const handleFoodAdd = async () => {
@@ -50,13 +52,10 @@ const AddFoodItem = () => {
                 })
             });
     
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-    
             const result = await response.json();
             console.log("Result:", result);
             alert(result.message);
+           
             }
         } catch (error) {
             console.error("Error adding food:", error);

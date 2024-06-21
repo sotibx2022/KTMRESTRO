@@ -18,3 +18,17 @@ export async function GET(request, context) {
         return NextResponse.json({ error: "Failed to fetch food items" }, { status: 500 });
     }
 }
+export async function DELETE(request, content){
+    try {
+        await connectToDb();
+        const idToDelete = content.params.id;
+        console.log(idToDelete);
+        const result = await Food.deleteOne({_id:idToDelete});
+        if(result){
+            return NextResponse.json({message:"Food Item Deleted Successfully",status:200, success:true})
+        }
+        return NextResponse.json({message:"There is nothing to delete", status:204, success:false})
+    } catch (error) {
+        return NextResponse.json({message:"Nothing Found to delete", status:500, success:false})
+    }
+}
