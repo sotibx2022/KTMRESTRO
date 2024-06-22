@@ -1,0 +1,37 @@
+.banner_Wrapper{
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7945553221288515) 100%),url("../../../../public/assets/banner.jpg");
+    height: 40vh;
+    margin-top: -1rem;
+}
+.search_inputs{
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    height: 100%;
+
+}
+.search_inputs:nth-child(1){
+    position: relative;
+}
+.search_inputs input{
+    margin-bottom: 0rem;
+    width: 20vw;
+}
+.search_inputs button{
+    border-radius: 0px;
+}
+.locations_wrapper {
+    background: white;
+    position: absolute;
+    list-style: none;
+    width: 50%;
+    height: 10vh; /* Adjust the height as per your requirement */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds wrapper height */
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    padding: 10px; /* Optional: Add padding inside the wrapper */
+}
+.locations_wrapper li{
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
