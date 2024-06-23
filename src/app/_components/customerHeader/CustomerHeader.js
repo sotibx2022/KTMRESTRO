@@ -20,6 +20,7 @@ const CustomerHeader = () => {
                         <li className='list_item'><Link href="#">Foods</Link></li>
                         <li className='list_item'><Link href="#">SignIn</Link></li>
                         <li className='list_item'><Link href="#">Register</Link></li>
+                        <li className='list_item'><Link href="#">Cart (0)</Link></li>
 
                     </ul>
                 </div>

@@ -110,3 +110,48 @@ td img {
     max-width: 100px;
     max-height: 100px;
 }
+
+/* Css For Restaurant Wrapper in home Page */
+
+.details {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.restaurant_Wrapper {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 20vw;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.restaurant_Wrapper:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+.banner_Wrapper{
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7945553221288515) 100%),url("../../public/assets/banner.jpg");
+    height: 40vh;
+    margin-top: -1rem;
+}
+
+
+.restaurant_Wrapper p {
+    margin: 5px 0;
+}
+
+.label {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    
+}
